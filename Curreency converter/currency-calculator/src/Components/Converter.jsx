@@ -45,7 +45,7 @@ const Converter = () => {
     }, [convertselectedvalue, inputvalue, selectedvalue])
 
     return (
-        <div >
+        <div className='data'>
             <input type="text" value={Number(inputvalue)} onChange={inputvaluehandler} disabled={isLoading} />
             <select name="" id="" value={selectedvalue} onChange={selecthandler} disabled={isLoading}>
                 <option value="USD">USD</option>
@@ -59,7 +59,7 @@ const Converter = () => {
                 <option value="CAD">CAD</option>
                 <option value="INR">INR</option>
             </select>
-            <p>{converteddata} {convertselectedvalue}</p>
+            <p className='amount'>{converteddata} {convertselectedvalue}</p>
 
         </div>
     )
